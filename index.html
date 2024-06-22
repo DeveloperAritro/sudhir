@@ -17,7 +17,9 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <!-- <div class="w3-row s1 w3-light-grey"> -->
-  <div class="w3-sidebar w3-bar-block" style="width:25%">
+  <!-- <div class="w3-sidebar w3-bar-block" style="width:25%"> -->
+  <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
     <div class="w3-row-padding">
       <a href="#" class="w3-button w3-ripple ">Home</a>
     </div>
@@ -266,6 +268,15 @@ function plusDivs(n) {
 
 function currentDiv(n) {
   showDivs(slideIndex = n);
+}
+
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
 }
 
 function showDivs(n) {
